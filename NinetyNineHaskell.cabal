@@ -2,12 +2,12 @@ name:                NinetyNineHaskell
 version:             0.1.0.0
 synopsis:            Simple project template from stack
 description:         Please see README.md
-homepage:            https://github.com/githubuser/NinetyNineHaskell#readme
+homepage:            https://github.com/financeCoding/NinetyNineHaskell#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2016 Author name here
+author:              Adam Singer
+maintainer:          financeCoding@gmail.com
+copyright:           2016 Adam Singer
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
