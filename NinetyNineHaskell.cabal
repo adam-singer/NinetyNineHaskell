@@ -3,8 +3,6 @@ version:             0.1.0.0
 synopsis:            Simple project template from stack
 description:         Please see README.md
 homepage:            https://github.com/financeCoding/NinetyNineHaskell#readme
-license:             BSD3
-license-file:        LICENSE
 author:              Adam Singer
 maintainer:          financeCoding@gmail.com
 copyright:           2016 Adam Singer
