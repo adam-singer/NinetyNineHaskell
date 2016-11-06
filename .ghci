@@ -1,0 +1,16 @@
+import IPPrint.Colored
+:set -interactive-print=IPPrint.Colored.cpprint
+:def cp (\_ -> return ":set -interactive-print=IPPrint.Colored.cpprint")
+:def ncp (\_ -> return ":set -interactive-print=print")
+:def hlint const . return $ ":! hlint \"src\""
+let hoogleCmdWithArgs = ":! hoogle --link --number --count="
+let hoogleDefaultCount = "15"
+:def hoogle \s -> return $ hoogleCmdWithArgs ++ hoogleDefaultCount ++ " \"" ++ s ++ "\""
+let hooglenHeadWords = head . words
+let hooglenRestWords = \x -> drop ((+1) . length . hooglenHeadWords  $ x) x
+:def hooglen \s -> return $ hoogleCmdWithArgs ++ hooglenHeadWords s ++ " \"" ++ hooglenRestWords s ++ "\""
+:def doc \x -> return $ ":!hoogle --info \"" ++ x ++ "\""
+:def pl \s -> return $ ":! pointfree \"" ++ s ++ "\""
+:set prompt "\ESC[33mλ > \ESC[m"
+:set +t
+

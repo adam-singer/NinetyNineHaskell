@@ -1,7 +1,9 @@
-resolver: lts-7.6
-packages:
-- '.'
-extra-deps: []
 flags: {}
 extra-package-dbs: []
-
+packages:
+- '.'
+extra-deps:
+- ghci-pretty-0.0.2
+- ipprint-0.6
+- sr-extra-1.46.3.2
+resolver: lts-7.6
