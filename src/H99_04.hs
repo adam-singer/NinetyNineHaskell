@@ -32,7 +32,18 @@ myLength''' list = myLength_acc list 0
                    myLength_acc (_:xs) n = myLength_acc xs (n+1)
 
 -- Using foldl/foldr
--- TODO(adams): complete
+myLength'''' :: MyLength a
+myLength'''' = foldl (\n _ -> n + 1) 0
+myLength''''' :: MyLength a
+myLength''''' = foldr (\_ n -> n + 1) 0
+myLength'''''' :: MyLength a
+myLength'''''' = foldr (\_ -> (+1)) 0
+myLength''''''' :: MyLength a
+myLength''''''' = foldr ((+) . (const 1)) 0
+myLength'''''''' :: MyLength a
+myLength'''''''' = foldr (const (+1)) 0
+myLength''''''''' :: MyLength a
+myLength''''''''' = foldl (const . (+1)) 0
 
 solution04 = undefined
 
