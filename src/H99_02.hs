@@ -65,10 +65,10 @@ myButLast'''''' = fst . foldl (\(a,b) x -> (b,x)) (err1, err2)
     err1 = error "Empty list"
     err2 = error "Singleton"
 
-myButLast''''''' = fst . foldl carrySnd errs
-  where
-    carrySnd (a, b) x = (b, x)
-    errs = (error "Empty list", error "Singleton")
+--myButLast''''''' = fst . foldl carrySnd errs
+--  where
+--    carrySnd (a, b) x = (b, x)
+--    errs = (error "Empty list", error "Singleton")
 
 myButLast'''''''' :: Foldable f => f a -> Maybe a
 myButLast'''''''' = fst . foldl carrySndMaybe emptyOrSingleton
