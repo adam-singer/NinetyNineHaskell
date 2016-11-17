@@ -45,5 +45,16 @@ myLength'''''''' = foldr (const (+1)) 0
 myLength''''''''' :: MyLength a
 myLength''''''''' = foldl (const . (+1)) 0
 
+-- Zipping with an infinite list
+-- Create infinite list starting from 1 then zip the two lists together and take the last
+-- element which is a pair from the result.
+
+myLength'''''''''' xs = snd $ last $ zip xs [1..]
+myLength''''''''''' = snd . last . (flip zip [1..])
+myLength'''''''''''' = fst . last . zip [1..]
+
+-- Mapping all elements to "1"
+myLength''''''''''''' = sum . map (\_ -> 1)
+
 solution04 = undefined
 
