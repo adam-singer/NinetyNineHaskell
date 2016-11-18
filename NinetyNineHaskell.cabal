@@ -17,6 +17,8 @@ executable NinetyNineHaskell
                      , H99_02
                      , H99_03
                      , H99_04
+                     , H99_05
+                     , H99_06
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5
                      , ipprint >= 0.6
