@@ -27,6 +27,3 @@ myReverse3 xs = myReverse3' xs []
     myReverse3' (x:xs) reversed = myReverse3' xs (x:reversed)
 
 myReverse4 xs = foldr (\x fId empty -> fId (x:empty)) id xs []
-
-solution05 = undefined
-
